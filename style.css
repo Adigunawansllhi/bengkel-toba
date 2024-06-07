@@ -1,0 +1,91 @@
+:root {
+  --primary: yellow;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.7) url(asset/img/bg.png);
+  background-blend-mode: darken;
+  /* background-position: 0 -200px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1; /* Ubah nilai z-index menjadi positif */
+}
+
+nav {
+  z-index: 1000; /* Pastikan nav memiliki z-index lebih tinggi dari header */
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-logo a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+nav .nav-logo a span {
+  color: var(--primary);
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 12px;
+}
+
+nav .nav-links a:hover {
+  color: var(--primary);
+  transition: 0.3s ease-in-out;
+}
+
+.hamburger-menu a {
+  color: var(--primary);
+  font-size: 1.2rem;
+  display: none;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  padding: 40px;
+  color: white;
+}
+
+.hero-content h1 {
+  margin-bottom: 20px;
+}
+
+button a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    background-position: -200px 0;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger-menu a {
+    display: block;
+  }
+
+  .about {
+    display: block;
+  }
+}
